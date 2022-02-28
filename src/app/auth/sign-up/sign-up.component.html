@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row vh-100 d-flex justify-content-center align-items-center">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-body">
+          <div class="row text-center">
+            <h2 class="mt-2">OptechX</h2>
+            <h2 class="font-weight-bold mt-4">Sign Up</h2>
+            <p>Already have an account? Log In</p>
+          </div>
+          <div class="row p-4 mb-5">
+            <div class="col-md-6">
+              <form [formGroup]="signUpForm">
+                <label>Email</label>
+                <input type="text" class="form-control p-2" formControlName="email"/>
+                <button class="btn btn-dark-gray form-control text-white p-2 mt-3">CONTINUE</button>
+              </form>
+            </div>
+            <div class="col-md-1">
+              <div class = "vertical"></div>
+            </div>
+            <div class="col-md-5">
+              <div class="row">
+                <label>Or Connect with Us</label>
+                <button class="btn btn-light-gray form-control p-2"><i class="fa fa-facebook-f"></i><span>Connect With Facebook</span></button>
+                <button class="btn btn-light-gray form-control p-2 mt-3"><i class="fa fa-twitter"></i><span>Connect With Twitter</span></button>
+                <button class="btn btn-light-gray form-control p-2 mt-3"><i class="fa fa-google"></i><span>Connect With Google</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+</div>
