@@ -1,34 +1,34 @@
-<div class="container">
+<div class="container-fluid">
   <div class="row vh-100 d-flex justify-content-center align-items-center">
     <div class="col-md-2"></div>
     <div class="col-md-8">
-      <div class="card">
+      <div class="card p-3">
         <div class="card-body">
-          <div class="row text-center">
-            <h2 class="mt-2">OptechX</h2>
-            <h2 class="font-weight-bold mt-4">Login</h2>
-            <p>Welcome back. Please login to your account</p>
+          <div class="text-center">
+            <img src="../../../assets/images/Optechx-Logo-1-2048x514 1.png" class="img">
+            <p class="font-style mt-4">Login</p>
+            <p class="f">Welcome back. Please login to your account</p>
           </div>
-          <div class="row p-5">
+          <div class="row p-3">
             <div class="col-md-6">
               <form [formGroup]="loginForm">
-                <label>Email</label>
-                <input type="text" class="form-control p-2" formControlName="email"/>
-                <label class="mt-3">Password</label>
-                <input type="text" class="form-control p-2" formControlName="password"/>
-                <p class="mt-3">Forgot Password?</p>
-                <button class="btn btn-dark-gray form-control text-white p-2" (click)="onSubmit()">LOG IN</button>
+                <label class="font-size mt-1">Email</label>
+                <input type="text" class="form-control p-4" formControlName="email"/>
+                <label class="mt-3 font-size">Password</label>
+                <input type="text" class="form-control p-4" formControlName="password"/>
+                <p class="mt-3 f" style="color: #757575;">Forgot Password?</p>
+                <button class="btn btn-primary text-white p-3" (click)="onSubmit()">LOG IN</button>
               </form>
             </div>
             <div class="col-md-1">
               <div class = "vertical"></div>
             </div>
             <div class="col-md-5">
-              <div class="row">
-                <label>Or Connect with Us</label>
-                <button class="btn btn-light-gray form-control p-2"><i class="fa fa-facebook-f"></i><span>Connect With Facebook</span></button>
-                <button class="btn btn-light-gray form-control p-2 mt-3"><i class="fa fa-twitter"></i><span>Connect With Twitter</span></button>
-                <button class="btn btn-light-gray form-control p-2 mt-3"><i class="fa fa-google"></i><span>Connect With Google</span></button>
+              <label class="font-size">Or Connect with Us</label>
+              <div class="row media">
+                <button class="btn btn-microsoft p-3 font-size"><img src="../../../assets/images/windows.png"/><span>Connect With Microsoft</span></button>
+                <button class="btn btn-twitter p-3 mt-3 font-size"><img src="../../../assets/images/Group 217.png"/><span>Connect With Twitter</span></button>
+                <button class="btn btn-google p-3 mt-3 font-size"><img src="../../../assets/images/google.png"/><span>Connect With Google</span></button>
               </div>
             </div>
           </div>

@@ -1,18 +1,15 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { AuthGuard } from './_core/guards/auth.guard';
+import { Routes, RouterModule } from '@angular/router';
+
 
 const routes: Routes = [
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: '', loadChildren: () => import('../app/auth/auth.module').then(m => m.AuthModule) },
- { path: '', loadChildren: () => import('../app/pages/pages.module').then(m => m.PagesModule) },
-//  { path: '', canLoad: [AuthGuard], loadChildren: () => import('@app/pages/pages.module').then(m => m.PagesModule) },
-  { path: '**', redirectTo: 'error/403', pathMatch: 'full' },
+  { path: '', loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule)},
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })
-  ],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

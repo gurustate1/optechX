@@ -1,28 +1,30 @@
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RouterModule, Routes } from '@angular/router';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { PagesComponent } from './pages.component';
+import { CommonModule } from '@angular/common';
 
-const routes: Routes = [
-  {
-    path: '',
-    component: PagesComponent,
-    children: [
-      { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-      { path: 'dashboard', component: DashboardComponent }
-    ]
-  }
-];
+import { PagesRoutingModule } from './pages-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ProfileManagementComponent } from './profile-management/profile-management.component';
+import { OemManagementComponent } from './oem-management/oem-management.component';
+import { ApplicationViewComponent } from './application-view/application-view.component';
+import { CreateImageComponent } from './create-image/create-image.component';
+import { OrderManagementComponent } from './order-management/order-management.component';
+import { ReportsComponent } from './reports/reports.component';
+import { InvoiceComponent } from './invoice/invoice.component';
 
 @NgModule({
   declarations: [
-    DashboardComponent
+    DashboardComponent,
+    ProfileManagementComponent,
+    OemManagementComponent,
+    ApplicationViewComponent,
+    CreateImageComponent,
+    OrderManagementComponent,
+    ReportsComponent,
+    InvoiceComponent
   ],
   imports: [
-    FormsModule,
-    ReactiveFormsModule,
-    RouterModule.forChild(routes)
+    CommonModule,
+    PagesRoutingModule
   ]
 })
 export class PagesModule { }

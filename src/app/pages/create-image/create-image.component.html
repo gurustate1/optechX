@@ -1,0 +1,178 @@
+<hr class="hr">
+<div class="container ml-4 mr-4 mt-3">
+  <div id="stepper1" class="bs-stepper">
+    <div class="bs-stepper-header">
+      <div class="step" data-target="#test-l-1">
+        <button class="step-trigger">
+          <span class="bs-stepper-circle">1</span>
+          <!-- <span class="bs-stepper-label">Email</span> -->
+        </button>
+      </div>
+      <div class="line"></div>
+      <div class="step" data-target="#test-l-2">
+        <button class="step-trigger">
+          <span class="bs-stepper-circle">2</span>
+          <!-- <span class="bs-stepper-label">Password</span> -->
+        </button>
+      </div>
+      <div class="line"></div>
+      <div class="step" data-target="#test-l-3">
+        <button class="step-trigger">
+          <span class="bs-stepper-circle">3</span>
+          <!-- <span class="bs-stepper-label">Validate</span> -->
+        </button>
+      </div>
+      <div class="line"></div>
+      <div class="step" data-target="#test-l-4">
+        <button class="step-trigger">
+          <span class="bs-stepper-circle">4</span>
+          <!-- <span class="bs-stepper-label">Validate</span> -->
+        </button>
+      </div>
+    </div>
+    <div class="bs-stepper-content">
+      <form>
+        <div id="test-l-1" class="content">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>OS Selection and Editions</label>
+                    <select class="form-control">
+                      <option></option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group ml-3">
+                    <label>System Type</label><br/>
+                    <input type="radio" class="radio" value="32 Bit"><span class="ml-2">32 Bit</span>
+                    <input type="radio" class="ml-2 radio" value="64 Bit"><span class="ml-2">64 Bit</span>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-md-12">
+                  <label>OEM Selection</label>
+                  <div class="card card-white mt-2">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="card card-white">
+                          <div class="card-body">
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button (click)="next()" class="btn btn-primary p-3 mt-3">NEXT</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="test-l-2" class="content">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>Add Language</label>
+                    <select class="form-control">
+                      <option value=""></option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label>Windows Features</label>
+                    <textarea class="form-control" rows="15"></textarea>
+                  </div>
+                </div>
+              </div>
+              <button (click)="next()" class="btn btn-primary p-3 mt-3">Next</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="test-l-3" class="content">
+          <div class="card">
+            <div class="card-body">
+              <div class="row mt-3">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label>App Section</label>
+                    <div class="card card-white mt-2">
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="card card-white">
+                            <div class="card-body">
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button (click)="next()" class="btn btn-primary p-3 mt-3">Next</button>
+            </div>
+          </div>
+          <!-- <button type="submit" class="btn btn-primary mt-5">Submit</button> -->
+        </div>
+
+        <div id="test-l-4" class="content">
+          <div class="card">
+            <div class="card-body">
+              <div class="row mt-3">
+                <div class="col-md-5">
+                  <label class="font-weight-bold">OS Seletion and Editions: </label><br><br>
+                  <label class="font-weight-bold">System Type : </label><br><br>
+                  <label class="font-weight-bold">OEM Selection : </label><br><br>
+                  <div class="row">
+                    <div class="card">
+                      <div class="card-body">
+
+                      </div>
+                    </div>
+                  </div>
+                  <label class="font-weight-bold mt-2">Language : </label><br><br>
+                  <label class="font-weight-bold">Windows Features : </label><br><br>
+                  <textarea class="form-control" rows="7"></textarea><br>
+                  <label class="font-weight-bold">Windows Features : </label><br><br>
+                  <div class="row">
+                    <div class="card">
+                      <div class="card-body">
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <button type="submit" class="btn btn-primary mt-5">Submit</button> -->
+          <button class="btn-primary mt-3 p-3" (click)="confirmOrder(content)">CONFIRM ORDER</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+<ng-template #content let-modal>
+  <div class="modal-content p-5">
+    <div class="modal-body p-3 text-center">
+      <h2>Are you sure to confirm your order?</h2>
+      <p>It is long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+      <button class="bn btn-primary text-white p-3" (click)="submit()">SUBMIT
+      </button>
+    </div>
+  </div>
+</ng-template>
+

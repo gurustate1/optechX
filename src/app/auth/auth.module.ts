@@ -1,55 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+import { AuthRoutingModule } from './auth-routing.module';
+import { PlansComponent } from './plans/plans.component';
 import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { AuthComponent } from './auth.component';
-import { RouterModule, Routes } from '@angular/router';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
-import { PlansComponent } from './plans/plans.component';
+import { VerifyEmailComponent } from './verify-email/verify-email.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
-const routes: Routes = [
-  {
-    path: '',
-    component: AuthComponent,
-    children: [
-      {
-        path: '',
-        redirectTo: 'login',
-        pathMatch: 'full'
-      },
-      {
-        path: 'login',
-        component: LoginComponent
-      },
-      {
-        path: 'sign-up',
-        component: SignUpComponent
-      },
-      {
-        path: 'create-account',
-        component: CreateAccountComponent
-      },
-      {
-        path: 'plans',
-        component: PlansComponent
-      }
-    ]
-  }
-];
 
 @NgModule({
-  declarations: [
-    AuthComponent,
-    LoginComponent,
-    SignUpComponent,
-    CreateAccountComponent,
-    PlansComponent
-  ],
+  declarations: [PlansComponent, LoginComponent, SignUpComponent, CreateAccountComponent, VerifyEmailComponent, ForgotPasswordComponent, ResetPasswordComponent],
   imports: [
     CommonModule,
-    ReactiveFormsModule,
-    RouterModule.forChild(routes)
+    AuthRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class AuthModule { }

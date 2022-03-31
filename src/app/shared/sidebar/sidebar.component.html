@@ -1,0 +1,49 @@
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+  <ul class="nav">
+    <li class="nav-item" [ngClass]="{ 'active': dashboard.isActive }">
+      <a class="nav-link" routerLink="/dashboard" routerLinkActive #dashboard="routerLinkActive">
+        <!-- <img src="../../../assets/images/Vector (3).png"/> -->
+        <span class="menu-title">CRM Management</span>
+      </a>
+    </li>
+    <li class="nav-item" [ngClass]="{ 'active': forms.isActive }">
+      <a class="nav-link" routerLink="forms/basic-elements" routerLinkActive #forms="routerLinkActive">
+        <span class="menu-title">Application Management</span>
+      </a>
+    </li>
+    <li class="nav-item" [ngClass]="{ 'active': forms.isActive }">
+      <a class="nav-link" routerLink="forms/basic-elements" routerLinkActive #forms="routerLinkActive">
+        <span class="menu-title">App Loader</span>
+      </a>
+    </li>
+    <li class="nav-item" [ngClass]="{ 'active': forms.isActive }">
+      <a class="nav-link" routerLink="forms/basic-elements" routerLinkActive #forms="routerLinkActive">
+        <span class="menu-title">Create An Image / Order</span>
+      </a>
+    </li>
+    <li class="nav-item" [ngClass]="{ 'active': forms.isActive }">
+      <a class="nav-link" routerLink="forms/basic-elements" routerLinkActive #forms="routerLinkActive">
+        <span class="menu-title">Order Management</span>
+      </a>
+    </li>
+    <li class="nav-item" [ngClass]="{ 'active': forms.isActive }">
+      <a class="nav-link" routerLink="forms/basic-elements" routerLinkActive #forms="routerLinkActive">
+        <span class="menu-title">Reports</span>
+      </a>
+    </li>
+    <li class="nav-item" [ngClass]="{ 'active': forms.isActive }">
+      <a class="nav-link" routerLink="forms/basic-elements" routerLinkActive #forms="routerLinkActive">
+        <span class="menu-title">Invoices</span>
+      </a>
+    </li>
+
+    <li class="nav-item mt-5 text-center" [ngClass]="{ 'active': forms.isActive }">
+      <img src="../../../assets/images/Group 158.png"/>
+      <span class="font-weight-bold">OptechX Enterprise</span><br>
+      <span>Get Unlimited Seats, Dedicated Phone Support and More!</span>
+    </li>
+    <li class="nav-item text-center mt-3" [ngClass]="{ 'active': forms.isActive }">
+      <button class="btn btn-orange text-white">PLAN MANAGEMENT</button>
+    </li>
+  </ul>
+</nav>
